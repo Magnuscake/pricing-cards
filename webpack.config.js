@@ -4,7 +4,7 @@ const path = require("path");
 const config = {
   entry: "./src/index.js",
   output: {
-    filename: "output.js",
+    filename: "main.js",
     path: path.resolve(__dirname, "public"),
   },
   mode: "development",
