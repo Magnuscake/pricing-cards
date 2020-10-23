@@ -7,7 +7,7 @@ const Content = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  height: ${(props) => (props.highlight ? "400px" : "360px")};
+  height: ${(props) => (props.highlight ? "380px" : "340px")};
   width: 270px;
   padding: 25px 20px;
   background: ${(props) => (props.highlight ? "#7986cb" : "#fafafa")};
@@ -51,28 +51,36 @@ const Hr = styled.div`
 const Button = styled.button`
   display: block;
   width: 95%;
-  height: 35px;
+  height: 40px;
   margin-top: 20px;
   background: ${(props) => (props.highlight ? "#fafafa" : "#7986cb")};
   color: ${(props) => (props.highlight ? "#000" : "#fff")};
   text-transform: uppercase;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
 `;
 
-const PriceCard = ({ buttonText, highlight }) => {
+const PriceCard = ({
+  buttonText,
+  highlight,
+  planType,
+  price,
+  storage,
+  usersAllowed,
+  sendLimit,
+}) => {
   return (
     <Content highlight={highlight}>
-      Professional
+      {planType}
       <Price>
-        <Span>$</Span> 24.99
+        <Span>$</Span> {price}
       </Price>
       <Hr highlight={highlight} />
-      <CardInfo>1 TB Storage</CardInfo>
+      <CardInfo>{storage} Storage</CardInfo>
       <Hr highlight={highlight} />
-      <CardInfo>5 Users Allowed</CardInfo>
+      <CardInfo>{usersAllowed} Users Allowed</CardInfo>
       <Hr highlight={highlight} />
-      <CardInfo>Send up to 10 GB</CardInfo>
+      <CardInfo>Send up to {sendLimit} GB</CardInfo>
       <Button highlight={highlight}>{buttonText}</Button>
     </Content>
   );
