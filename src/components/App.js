@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import Header from "./Header";
-import Switch from "./Switch";
-import PriceCardGroup from "./PriceCardGroup";
+import Header from './Header';
+import Switch from './Switch';
+import PriceCardGroup from './PriceCardGroup';
 
-import "../styles/global.css";
+import '../styles/global.css';
 
 const Wrapper = styled.div`
   display: flex;
