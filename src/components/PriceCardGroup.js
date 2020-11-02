@@ -1,36 +1,39 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import PriceCard from "./PriceCard";
+import PriceCard from './PriceCard';
 
 const planDetails = [
   {
-    planType: "Basic",
+    id: 1,
+    planType: 'Basic',
     price: {
-      monthly: "19.99",
-      anually: "229.99",
+      monthly: '19.99',
+      anually: '229.99',
     },
-    storage: "550 GB",
+    storage: '550 GB',
     usersAllowed: 2,
     sendLimit: 3,
   },
   {
-    planType: "Professional",
+    id: 2,
+    planType: 'Professional',
     price: {
-      monthly: "24.99",
-      anually: "279.99",
+      monthly: '24.99',
+      anually: '279.99',
     },
-    storage: "1 TB",
+    storage: '1 TB',
     usersAllowed: 5,
     sendLimit: 10,
   },
   {
-    planType: "Master",
+    id: 3,
+    planType: 'Master',
     price: {
-      monthly: "39.99",
-      anually: "449.99",
+      monthly: '39.99',
+      anually: '449.99',
     },
-    storage: "2 TB",
+    storage: '2 TB',
     usersAllowed: 10,
     sendLimit: 20,
   },
@@ -52,8 +55,8 @@ const PriceCardGroup = ({ changePrice }) => {
             storage={details.storage}
             usersAllowed={details.usersAllowed}
             sendLimit={details.sendLimit}
-            key={index}
-            highlight={index === 1 ? "highlight" : ""}
+            key={details.id}
+            highlight={index === 1 ? 'highlight' : ''}
             buttonText="Learn More"
           />
         );
